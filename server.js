@@ -2,7 +2,6 @@ import express from 'express';
 import dotenv from 'dotenv';
 
 // Load env files
-
 dotenv.config({ path: './config/config.env' });
 
 const app = express();
