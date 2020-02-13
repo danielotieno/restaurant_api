@@ -1,33 +1,24 @@
 import { Router } from 'express';
+import RestaurantController from '../controller/Restaurant';
+
+const {
+  createRestaurant,
+  getAllRestaurants,
+  getRestaurant,
+  updateRestaurant,
+  deleteRestaurant,
+} = RestaurantController;
 
 const router = Router();
 
-router.get('/restaurants', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Show all restaurants' });
-});
+router.get('/restaurants', getAllRestaurants);
 
-router.get('/restaurants/:id', (req, res) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Show a single restaurant ${req.params.id}` });
-});
+router.get('/restaurants/:id', getRestaurant);
 
-router.post('/restaurants', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Create a new resturant' });
-});
+router.post('/restaurants', createRestaurant);
 
-router.put('/restaurants/:id', (req, res) => {
-  res.status(200).json({
-    success: true,
-    msg: `Update the restaurant with id ${req.params.id}`,
-  });
-});
+router.put('/restaurants/:id', updateRestaurant);
 
-router.delete('/restaurants/:id', (req, res) => {
-  res.status(200).json({
-    success: true,
-    msg: `Delete a single restaurant with id ${req.params.id}`,
-  });
-});
+router.delete('/restaurants/:id', deleteRestaurant);
 
 export default router;
