@@ -4,16 +4,32 @@
   "repository": "git@github.com:danielotieno/devcamper_api.git",
   "author": "Daniel Otieno <danielotieno.ke@gmail.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "start": "NODE_ENV=production node server",
-    "dev": "nodemon --experimental-modules server.js"
+    "start": "NODE_ENV=production node start.js",
+    "dev": "nodemon start.js"
   },
   "dependencies": {
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/runtime": "^7.8.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "@babel/core": "^7.8.4",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   }
 }
