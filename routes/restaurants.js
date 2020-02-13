@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import RestaurantController from '../controller/Restaurant';
+import RestaurantController from '../controllers/Restaurant';
 
 const {
   createRestaurant,
