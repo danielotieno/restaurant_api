@@ -1,7 +1,7 @@
 {
   "name": "devcamper_api",
   "version": "1.0.0",
-  "repository": "git@github.com:danielotieno/devcamper_api.git",
+  "repository": "git@github.com:danielotieno/restaurant_api.git",
   "author": "Daniel Otieno <danielotieno.ke@gmail.com>",
   "license": "MIT",
   "scripts": {
