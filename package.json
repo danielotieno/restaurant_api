@@ -1,0 +1,19 @@
+{
+  "name": "devcamper_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:danielotieno/devcamper_api.git",
+  "author": "Daniel Otieno <danielotieno.ke@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
