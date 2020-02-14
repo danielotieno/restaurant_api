@@ -8,9 +8,12 @@ class RestaurantController {
     try {
       const restaurants = await Restaurant.find();
 
-      res
-        .status(200)
-        .json({ success: true, msg: 'All restaurants', data: restaurants });
+      res.status(200).json({
+        success: true,
+        msg: 'All restaurants',
+        count: restaurants.length,
+        data: restaurants,
+      });
     } catch (error) {
       res.statu(400).json({ success: false, error: error.errmsg });
     }
@@ -83,11 +86,20 @@ class RestaurantController {
   // @desc   DELETE a restaurant
   // @route  DEL /api/v1/restaurants/:id
   // @access Private
-  static deleteRestaurant(req, res, next) {
-    res.status(200).json({
-      success: true,
-      msg: `Delete a single restaurant with id ${req.params.id}`,
-    });
+  static async deleteRestaurant(req, res, next) {
+    try {
+      const restaurant = await Restaurant.findByIdAndDelete(req.params.id);
+
+      if (!restaurant) {
+        return res
+          .status(404)
+          .json({ success: false, msg: 'Restaurant not found' });
+      }
+
+      res.status(200).json({ success: true, data: {} });
+    } catch (error) {
+      res.status(400).json({ success: false, error: error.errmsg });
+    }
   }
 }
 
