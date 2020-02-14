@@ -1,0 +1,170 @@
+﻿[
+  {
+    "Hotel Name": "Diani Hotel",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 450"
+  },
+  {
+    "Hotel Name": "Makuti Villas Hotel",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 451"
+  },
+  {
+    "Hotel Name": "Mnarani Club & Spa",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 452"
+  },
+  {
+    "Hotel Name": "Rozy Kilifi Hotel",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 453"
+  },
+  {
+    "Hotel Name": "Salty's Café",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 454"
+  },
+  {
+    "Hotel Name": "Zizini Beach Lodge",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 455"
+  },
+  {
+    "Hotel Name": "Kilifi Lodge",
+    "Location": "Kilifi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 456"
+  },
+  {
+    "Hotel Name": "Golf Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 457"
+  },
+  {
+    "Hotel Name": "Milimani Resort Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 458"
+  },
+  {
+    "Hotel Name": "Alcazar Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 459"
+  },
+  {
+    "Hotel Name": "Sheywe Guest Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 460"
+  },
+  {
+    "Hotel Name": "Western Star Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 461"
+  },
+  {
+    "Hotel Name": "Lumo Blues",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 462"
+  },
+  {
+    "Hotel Name": "malava K Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 463"
+  },
+  {
+    "Hotel Name": "Jamindas Paradise Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 464"
+  },
+  {
+    "Hotel Name": "Lantana Comfy",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 465"
+  },
+  {
+    "Hotel Name": "Rondo Retreat Center",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 466"
+  },
+  {
+    "Hotel Name": "Swan Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 467"
+  },
+  {
+    "Hotel Name": "Pine Cone Hotel",
+    "Location": "Kakamega",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 468"
+  },
+  {
+    "Hotel Name": "Villa Rosa Kempinski",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 469"
+  },
+  {
+    "Hotel Name": "Hilton Hotel",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 470"
+  },
+  {
+    "Hotel Name": "Sankara Hotel",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 471"
+  },
+  {
+    "Hotel Name": "Movenpick Hotel",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 472"
+  },
+  {
+    "Hotel Name": "Radisson Blue Hotel",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 473"
+  },
+  {
+    "Hotel Name": "The Boma Nairobi",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 474"
+  },
+  {
+    "Hotel Name": "Nairobi Serena",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 475"
+  },
+  {
+    "Hotel Name": "Fairmont The Norfolk",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 476"
+  },
+  {
+    "Hotel Name": "Tribe Hotel",
+    "Location": "Nairobi",
+    "Dishes": "Ugali, fish, Biryani, Pilau",
+    "Price": "60, 120, 300, 477"
+  }
+]
