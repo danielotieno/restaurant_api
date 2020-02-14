@@ -5,8 +5,8 @@
   "author": "Daniel Otieno <danielotieno.ke@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production node start.js",
-    "dev": "nodemon start.js"
+    "start": "NODE_ENV=production babel-node index.js",
+    "dev": "nodemon --exec babel-node index.js"
   },
   "dependencies": {
     "@babel/node": "^7.8.4",
