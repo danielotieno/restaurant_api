@@ -16,7 +16,7 @@ class RestaurantController {
         data: restaurants,
       });
     } catch (error) {
-      next(new ErrorResponse('Restaurants not found', 404));
+      next(error);
     }
   }
 
@@ -36,7 +36,7 @@ class RestaurantController {
         data: restaurant,
       });
     } catch (error) {
-      next(new ErrorResponse('Restaurant not found', 404));
+      next(error);
     }
   }
 
@@ -52,7 +52,7 @@ class RestaurantController {
         data: restaurant,
       });
     } catch (error) {
-      next(new ErrorResponse('Cannot create a restaurant', 400));
+      next(error);
     }
   }
 
@@ -76,7 +76,7 @@ class RestaurantController {
 
       res.status(200).json({ success: true, data: restaurant });
     } catch (error) {
-      next(new ErrorResponse('Restaurant not found', 404));
+      next(error);
     }
   }
 
@@ -93,7 +93,7 @@ class RestaurantController {
 
       res.status(200).json({ success: true, data: {} });
     } catch (error) {
-      next(new ErrorResponse('Restaurant not found', 404));
+      next(error);
     }
   }
 }

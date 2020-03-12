@@ -1,12 +1,23 @@
 import logger from 'fancy-log';
 
+import ErrorResponse from '../utils/errorResponse';
+
 const errorHanlder = (err, req, res, next) => {
+  let error = { ...err };
+
+  error.message = err.message;
+
   // Log to console for developer
   logger.info(err.stack);
 
-  res.status(err.statusCode).json({
+  if (err.name === 'CastError') {
+    const message = 'Resource not found';
+    error = new ErrorResponse(message, 404);
+  }
+
+  res.status(error.statusCode).json({
     success: false,
-    error: err.message,
+    error: error.message,
   });
 };
 
