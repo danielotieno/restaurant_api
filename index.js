@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import logger from 'fancy-log';
+
 import connectDB from './config/db';
 import routes from './routes';
 

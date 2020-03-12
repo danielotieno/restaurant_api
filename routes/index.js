@@ -1,9 +1,12 @@
 import restaurants from './restaurants';
+import errorHandler from '../middleware/error';
 
 const apiPrefix = '/api/v1';
 
 const routes = app => {
   app.use(apiPrefix, restaurants);
+
+  app.use(errorHandler);
 
   app.use('*', (req, res) =>
     res.status(404).json({
