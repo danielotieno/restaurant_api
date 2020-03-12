@@ -1,3 +1,4 @@
+import ErrorResponse from '../utils/errorResponse';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -15,7 +16,7 @@ class RestaurantController {
         data: restaurants,
       });
     } catch (error) {
-      res.statu(400).json({ success: false, error: error.errmsg });
+      next(new ErrorResponse('Restaurants not found', 404));
     }
   }
 
@@ -27,9 +28,7 @@ class RestaurantController {
       const restaurant = await Restaurant.findById(req.params.id);
 
       if (!restaurant) {
-        return res
-          .status(404)
-          .json({ success: false, msg: 'Restaurant not found' });
+        return next(new ErrorResponse('Restaurant not found', 404));
       }
 
       res.status(200).json({
@@ -37,7 +36,7 @@ class RestaurantController {
         data: restaurant,
       });
     } catch (error) {
-      res.status(400).json({ success: false, error: error.errmsg });
+      next(new ErrorResponse('Restaurant not found', 404));
     }
   }
 
@@ -53,7 +52,7 @@ class RestaurantController {
         data: restaurant,
       });
     } catch (error) {
-      res.status(400).json({ success: false, error: error.errmsg });
+      next(new ErrorResponse('Cannot create a restaurant', 400));
     }
   }
 
@@ -72,14 +71,12 @@ class RestaurantController {
       );
 
       if (!restaurant) {
-        return res
-          .status(404)
-          .json({ success: false, msg: 'Restaurant not found' });
+        return next(new ErrorResponse('Restaurant not found', 404));
       }
 
       res.status(200).json({ success: true, data: restaurant });
     } catch (error) {
-      res.status(400).json({ success: false, error: error.errmsg });
+      next(new ErrorResponse('Restaurant not found', 404));
     }
   }
 
@@ -91,14 +88,12 @@ class RestaurantController {
       const restaurant = await Restaurant.findByIdAndDelete(req.params.id);
 
       if (!restaurant) {
-        return res
-          .status(404)
-          .json({ success: false, msg: 'Restaurant not found' });
+        return next(new ErrorResponse('Restaurant not found', 404));
       }
 
       res.status(200).json({ success: true, data: {} });
     } catch (error) {
-      res.status(400).json({ success: false, error: error.errmsg });
+      next(new ErrorResponse('Restaurant not found', 404));
     }
   }
 }
