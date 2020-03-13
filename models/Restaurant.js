@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import slugify from 'slugify';
 
 // Declare the Schema of the Mongo model
 const RestaurantSchema = new mongoose.Schema({
@@ -56,6 +57,12 @@ const RestaurantSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+// Create slug from Restaurant name
+RestaurantSchema.pre('save', function(next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 // Export the model
