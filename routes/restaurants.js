@@ -1,4 +1,5 @@
 import { Router } from 'express';
+import asyncHandle from '../middleware/asyncHandler';
 import RestaurantController from '../controllers/restaurants';
 
 const {
@@ -11,14 +12,14 @@ const {
 
 const router = Router();
 
-router.get('/restaurants', getAllRestaurants);
+router.get('/restaurants', asyncHandle(getAllRestaurants));
 
-router.get('/restaurants/:id', getRestaurant);
+router.get('/restaurants/:id', asyncHandle(getRestaurant));
 
-router.post('/restaurants', createRestaurant);
+router.post('/restaurants', asyncHandle(createRestaurant));
 
-router.put('/restaurants/:id', updateRestaurant);
+router.put('/restaurants/:id', asyncHandle(updateRestaurant));
 
-router.delete('/restaurants/:id', deleteRestaurant);
+router.delete('/restaurants/:id', asyncHandle(deleteRestaurant));
 
 export default router;
