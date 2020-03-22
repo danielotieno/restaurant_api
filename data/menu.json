@@ -1,0 +1,74 @@
+[
+  {
+    "_id": "5d725a4a7b292f5f8ceff789",
+    "name": "French fries",
+    "description": "French fries, or simply fries, chips, finger chips, or french-fried potatoes, are batonnet or allumette-cut deep-fried potatoes.",
+    "price": "100",
+    "restaurant": "5d713995b721c3bb38c1f5d0",
+    "user": "5d7a514b5d2c12c7449be045"
+  },
+  {
+    "_id": "5d725c84c4ded7bcb480eaa0",
+    "name": "Chicken burger",
+    "description": "Bread crumbs and milk keep these chicken burgers unbelievably moist and flavourful. Try them at your next barbeque!",
+    "price": "120",
+    "restaurant": "5d725a1b7b292f5f8ceff790",
+    "user": "5c8a1d5b0190b214360dc034"
+  },
+  {
+    "_id": "5d725cb9c4ded7bcb480eaa1",
+    "name": "Mutton sandwich",
+    "description": "Mutton Sandwich is a delicious Continental recipe served as a Snack. this is very simple ans easy and delicious recipe.",
+    "price": "120",
+    "restaurant": "5d713a66ec8f2b88b8f830b8",
+    "user": "5d7a514b5d2c12c7449be046"
+  },
+  {
+    "_id": "5d725cd2c4ded7bcb480eaa2",
+    "name": "Chicken sandwich",
+    "description": "A chicken sandwich is a sandwich that typically consists of boneless, skinless chicken breast served between slices of bread, on a bun, or on a roll. Variations on the chicken sandwich include the chicken burger or chicken on a bun, hot chicken, and chicken salad sandwich",
+    "price": "110",
+    "restaurant": "5d725a1b7b292f5f8ceff789",
+    "user": "5c8a1d5b0190b214360dc033"
+  },
+  {
+    "_id": "5d725ce8c4ded7bcb480eaa3",
+    "name": "Fried chicken drumstick",
+    "description": "Fried Chicken Drumsticks are a favorite of all sorts of people, but it can be a hard dish to prepare. Give it a try!",
+    "price": "89",
+    "restaurant": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc031"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa4",
+    "name": "Buffalo wings",
+    "description": "A Buffalo wing, in the cuisine of the United States, is an unbreaded chicken wing section that is generally deep-fried then coated or dipped in a sauce consisting of a vinegar-based cayenne pepper hot sauce and melted butter prior to serving",
+    "price": "150",
+    "restaurant": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc031"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa5",
+    "name": "Potato chips",
+    "description": "Potato chips, or crisps, are thin slices of potato that may have been deep fried or baked until crunchy. They are commonly served as a snack, side dish, or appetizer.",
+    "price": "40",
+    "restaurant": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc032"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa6",
+    "name": "Coca-Cola",
+    "description": "Coca-Cola, or Coke, is a carbonated soft drink manufactured by The Coca-Cola Company. Originally marketed as a temperance drink and intended as a patent medicine, it was invented in the late 19th century",
+    "price": "60",
+    "restaurant": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc032"
+  },
+  {
+    "_id": "5d725cfec4ded7bcb480eaa7",
+    "name": "Chicken noodles",
+    "description": "Chicken Noodles - Stir-fried with chicken and egg noodles, this easy chicken noodle recipe is delicious, easy to make, and perfect for a weeknight dinner.",
+    "price": "90",
+    "restaurant": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc032"
+  }
+]

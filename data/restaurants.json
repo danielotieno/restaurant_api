@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "5d713995b721c3bb38c1f5d0",
+    "user": "5d7a514b5d2c12c7449be045",
+    "name": "Diani Reef Resort & Spa",
+    "description": "Diani Reef Beach Resort & Spa is the winner of many prestigious awards, the most recent being the 2015 Africa's Leading Spa Resort and 2015 Kenya's Leading Beach Resort awarded by the distinguished World Travel Awards.",
+    "Website": "https://www.dianireef.com/",
+    "Address": "Diani, Mombasa, KE"
+  },
+  {
+    "_id": "5d713a66ec8f2b88b8f830b8",
+    "user": "5d7a514b5d2c12c7449be046",
+    "name": "Baobab Beach Resort & Spa",
+    "description": "Located on the world famous Diani Beach, The Baobab Beach Resort and Spa is set within 80 acres of tropical gardens, overlooking the Indian Ocean. An oasis of tranquillity and serenity, the Resort’s picturesque location is nestled on a coral headland overlooking vast stretches of golden beach. Shaded by indigenous coastal vegetation and exotic coconut palms the resort stretches over 500 metres of golden beach front offering the ultimate luxury beach holiday.",
+    "Website": "https://www.baobab-beach-resort.com/",
+    "Address": "Ukunda, Mombasa, KE"
+  },
+  {
+    "_id": "5d725a037b292f5f8ceff787",
+    "user": "5c8a1d5b0190b214360dc031",
+    "name": "Golf Hotel Kakamega",
+    "description": "Golf Hotel Kakamega is located in a plush area of Kakamega town next to Golf Course and is just a short distance from Kakamega forest that has over 320 bird species. It takes approximately half an hour drive from Kisumu Airport to the hotel and with an arrangement the Hotel van is available at a fee.",
+    "Website": "https://www.golfhotelkakamega.com/",
+    "Address": "Giraffe Centre, Nairobi, Ke"
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff788",
+    "user": "5c8a1d5b0190b214360dc032",
+    "name": "Enashipai Resort & Spa",
+    "description": "Entumo Conference Centre at Enashipai is the quintessential meeting planners venue as it blends one of East Africa’s largest meeting facility with Kenya’s leading Spa Resort in one unique location.Be it…",
+    "Website": "https://www.enashipai.com/",
+    "Address": "Karen, Nairobi, Ke"
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff789",
+    "user": "5c8a1d5b0190b214360dc033",
+    "name": "Villa Rosa Kempinksi",
+    "description": "Offering the perfect fusion of European luxury and Kenyan hospitality, Villa Rosa Kempinski is a unique destination where guests can spend time relaxing or working. In addition to the 200 rooms and suites distributed throughout its ten floors, you will also find exquisite dining opportunities here. Our dining selection includes Cafe Villa Rosa, K Lounge our lobby lounge; Balcony Bar, Chinese Restaurant 88; Italian Restaurant LUCCA; and our Levant -style lounge and restaurant Tambourin.",
+    "Website": "https://www.kempinski.com/",
+    "Address": "Westlands, Nairobi, KE"
+  },
+  {
+    "_id": "5d725a1b7b292f5f8ceff790",
+    "user": "5c8a1d5b0190b214360dc034",
+    "name": "Acacia Premier Hotel",
+    "description": "We are proud to let you know that, while there is much to be said for the olden days, even today, there is still magic to be felt under the Acacia. We’re extremely pleased to introduce to you the Home of African Hospitality, the Acacia Premier Kisumu. An oasis of fine service and first-class comfort, a feast for the senses, an ideal rendezvous, a latter-day haven. The Acacia Premier Kisumu is the place for the discerning business & leisure traveler.",
+    "Website": "https://www.acaciapremier.com/",
+    "Address": "Achieng' Oneko Rd, Kisumu, Kenya"
+  }
+]
