@@ -6,11 +6,17 @@ const {
   createRestaurant,
   getAllRestaurants,
   getRestaurant,
+  getRestaurantsInRadius,
   updateRestaurant,
   deleteRestaurant,
 } = RestaurantController;
 
 const router = Router();
+
+router.get(
+  '/restaurants/radius/:zipcode/:distance',
+  asyncHandle(getRestaurantsInRadius),
+);
 
 router.get('/restaurants', asyncHandle(getAllRestaurants));
 

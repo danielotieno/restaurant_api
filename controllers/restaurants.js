@@ -1,4 +1,5 @@
 import ErrorResponse from '../utils/errorResponse';
+import geocoder from '../utils/geocoder';
 import Restaurant from '../models/Restaurant';
 
 class RestaurantController {
@@ -75,6 +76,34 @@ class RestaurantController {
     }
 
     res.status(200).json({ success: true, data: {} });
+  }
+
+  // @desc   GET restaurants within a radius
+  // @route  GET /api/v1/restaurants/:zipcode/:distance
+  // @access Private
+  static async getRestaurantsInRadius(req, res, next) {
+    const { zipcode, distance } = req.params;
+
+    // Get Lat/Long from geocoder
+
+    const loc = await geocoder.geocode(zipcode);
+    const lat = loc[0].latitude;
+    const lng = loc[0].longitude;
+
+    // Calculate Radius using Radians
+    // Divide distance by radius of earth
+    const radius = distance / 6371;
+
+    const restaurants = await Restaurant.find({
+      location: {
+        $geoWithin: {
+          $centerSphere: [[lng, lat], radius],
+        },
+      },
+    });
+    res
+      .status(200)
+      .json({ success: true, count: restaurants.length, data: restaurants });
   }
 }
 
