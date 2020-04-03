@@ -7,7 +7,19 @@ class RestaurantController {
   // @route  GET /api/v1/restaurants
   // @access Public
   static async getAllRestaurants(req, res, next) {
-    const restaurants = await Restaurant.find();
+    let query;
+
+    let queryStr = JSON.stringify(req.query);
+
+    queryStr = queryStr.replace(
+      /\b(gt|gte|lt|lte|in)\b/g,
+      (match) => `$${match}`,
+    );
+
+    // eslint-disable-next-line prefer-const
+    query = Restaurant.find(JSON.parse(queryStr));
+
+    const restaurants = await query;
 
     res.status(200).json({
       success: true,
