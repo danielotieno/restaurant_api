@@ -23,15 +23,15 @@ const restaurants = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/restaurants.json`, 'utf-8'),
 );
 
-const menues = JSON.parse(
-  fs.readFileSync(`${__dirname}/_data/menues.json`, 'utf-8'),
+const menus = JSON.parse(
+  fs.readFileSync(`${__dirname}/_data/menus.json`, 'utf-8'),
 );
 
 // Import Data into database
 const importData = async () => {
   try {
     await Restaurant.create(restaurants);
-    await Menu.create(menues);
+    await Menu.create(menus);
 
     logger.info('Data Imported Successfully');
     process.exit();

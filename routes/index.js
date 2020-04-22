@@ -1,10 +1,12 @@
 import restaurants from './restaurants';
+import menus from './menus';
 import errorHandler from '../middleware/error';
 
 const apiPrefix = '/api/v1';
 
-const routes = app => {
+const routes = (app) => {
   app.use(apiPrefix, restaurants);
+  app.use(apiPrefix, menus);
 
   app.use(errorHandler);
 

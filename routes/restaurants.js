@@ -2,6 +2,9 @@ import { Router } from 'express';
 import asyncHandle from '../middleware/asyncHandler';
 import RestaurantController from '../controllers/restaurants';
 
+// Include other resource router
+import menuRouter from './menus';
+
 const {
   createRestaurant,
   getAllRestaurants,
@@ -12,6 +15,9 @@ const {
 } = RestaurantController;
 
 const router = Router();
+
+// Re-Route into other resource router
+router.use('/restaurants/:bootcamId/menus', menuRouter);
 
 router.get(
   '/restaurants/radius/:zipcode/:distance',
