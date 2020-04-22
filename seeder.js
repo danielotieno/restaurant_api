@@ -5,6 +5,7 @@ import logger from 'fancy-log';
 
 // Load models
 import Restaurant from './models/Restaurant';
+import Menu from './models/Menu';
 
 // Load env variables
 dotenv.config({ path: './config/config.env' });
@@ -22,10 +23,16 @@ const restaurants = JSON.parse(
   fs.readFileSync(`${__dirname}/_data/restaurants.json`, 'utf-8'),
 );
 
+const menues = JSON.parse(
+  fs.readFileSync(`${__dirname}/_data/menues.json`, 'utf-8'),
+);
+
 // Import Data into database
 const importData = async () => {
   try {
     await Restaurant.create(restaurants);
+    await Menu.create(menues);
+
     logger.info('Data Imported Successfully');
     process.exit();
   } catch (error) {
@@ -37,6 +44,8 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await Restaurant.deleteMany();
+    await Menu.deleteMany();
+
     logger.info('Data Destroyed Successfully');
     process.exit();
   } catch (error) {
