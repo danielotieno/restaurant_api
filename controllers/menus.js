@@ -1,5 +1,6 @@
 import ErrorResponse from '../utils/errorResponse';
 import Menu from '../models/Menu';
+import Restaurant from '../models/Restaurant';
 
 class MenuController {
   // @desc   GET all menus
@@ -41,6 +42,27 @@ class MenuController {
     if (!menu) {
       return next(new ErrorResponse('No Menu with such id'), 404);
     }
+
+    res.status(200).json({
+      success: true,
+      data: menu,
+    });
+  }
+
+  // @desc   POST a menu
+  // @route  POST /api/v1/restaurants/restaurantId/menus
+  // @access Private
+
+  static async addMenu(req, res, next) {
+    req.body.restaurant = req.params.restaurantId;
+
+    const restaurant = await Restaurant.findById(req.params.restaurantId);
+
+    if (!restaurant) {
+      return next(new ErrorResponse('No Restaurant found with such id'), 404);
+    }
+
+    const menu = await Menu.create(req.body);
 
     res.status(200).json({
       success: true,
