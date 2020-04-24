@@ -49,7 +49,7 @@ class MenuController {
     });
   }
 
-  // @desc   POST a menu
+  // @desc   Create a menu
   // @route  POST /api/v1/restaurants/restaurantId/menus
   // @access Private
 
@@ -63,6 +63,28 @@ class MenuController {
     }
 
     const menu = await Menu.create(req.body);
+
+    res.status(200).json({
+      success: true,
+      data: menu,
+    });
+  }
+
+  // @desc   Update a menu
+  // @route  Put /api/v1/menus/:id
+  // @access Private
+
+  static async updateMenu(req, res, next) {
+    let menu = await Menu.findById(req.params.id);
+
+    if (!menu) {
+      return next(new ErrorResponse('No Menu found with such id'), 404);
+    }
+
+    menu = await Menu.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true,
+    });
 
     res.status(200).json({
       success: true,
