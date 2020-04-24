@@ -27,6 +27,26 @@ class MenuController {
       data: menus,
     });
   }
+
+  // @desc   GET single menu
+  // @route  GET /api/v1/:id
+  // @access Public
+
+  static async getMenu(req, res, next) {
+    const menu = await Menu.findById(req.params.id).populate({
+      path: 'restaurant',
+      select: 'name description website',
+    });
+
+    if (!menu) {
+      return next(new ErrorResponse('No Menu with such id'), 404);
+    }
+
+    res.status(200).json({
+      success: true,
+      data: menu,
+    });
+  }
 }
 
 export default MenuController;
