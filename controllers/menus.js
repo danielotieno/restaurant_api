@@ -13,7 +13,10 @@ class MenuController {
     if (req.params.restaurantId) {
       query = Menu.find({ restaurant: req.params.restaurantId });
     } else {
-      query = Menu.find();
+      query = Menu.find().populate({
+        path: 'restaurant',
+        select: 'name description website',
+      });
     }
 
     const menus = await query;

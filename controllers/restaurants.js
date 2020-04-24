@@ -26,7 +26,7 @@ class RestaurantController {
     );
 
     // eslint-disable-next-line prefer-const
-    query = Restaurant.find(JSON.parse(queryStr));
+    query = Restaurant.find(JSON.parse(queryStr)).populate('menus');
 
     // Select Fields
     if (req.query.select) {
@@ -133,11 +133,13 @@ class RestaurantController {
   // @route  DEL /api/v1/restaurants/:id
   // @access Private
   static async deleteRestaurant(req, res, next) {
-    const restaurant = await Restaurant.findByIdAndDelete(req.params.id);
+    const restaurant = await Restaurant.findById(req.params.id);
 
     if (!restaurant) {
       return next(new ErrorResponse('Restaurant not found', 404));
     }
+
+    restaurant.remove();
 
     res.status(200).json({ success: true, data: {} });
   }
