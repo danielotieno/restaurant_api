@@ -91,6 +91,25 @@ class MenuController {
       data: menu,
     });
   }
+
+  // @desc   Delete a menu
+  // @route  DEL /api/v1/menus/:id
+  // @access Private
+
+  static async deleteMenu(req, res, next) {
+    const menu = await Menu.findById(req.params.id);
+
+    if (!menu) {
+      return next(new ErrorResponse('No Menu found with such id'), 404);
+    }
+
+    await menu.remove();
+
+    res.status(200).json({
+      success: true,
+      data: {},
+    });
+  }
 }
 
 export default MenuController;
