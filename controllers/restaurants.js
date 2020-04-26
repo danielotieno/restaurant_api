@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+import path from 'path';
 import ErrorResponse from '../utils/errorResponse';
 import geocoder from '../utils/geocoder';
 import Restaurant from '../models/Restaurant';
@@ -170,6 +172,53 @@ class RestaurantController {
     res
       .status(200)
       .json({ success: true, count: restaurants.length, data: restaurants });
+  }
+
+  // @desc   Upload photo for a restaurant
+  // @route  PUT /api/v1/restaurants/:id/photo
+  // @access Private
+  static async restaurantPhotoUpload(req, res, next) {
+    const restaurant = await Restaurant.findById(req.params.id);
+
+    if (!restaurant) {
+      return next(new ErrorResponse('Restaurant not found', 404));
+    }
+
+    if (!req.file) {
+      return next(new ErrorResponse('Please upload a file', 400));
+    }
+
+    const { file } = req.files;
+
+    // make sure the uploaded image is actualy an image
+    if (!file.mimetype.startsWith('image')) {
+      return next(new ErrorResponse('Please upload an image file', 400));
+    }
+
+    // Check File Size
+    if (file.size > process.env.MAX_FILE_UPLOAD) {
+      return next(
+        new ErrorResponse(
+          `Please upload an image file less than ${process.env.MAX_FILE_UPLOAD}`,
+          400,
+        ),
+      );
+    }
+
+    file.name = `photo_${restaurant._id}${path.parse(file.name).ext}`;
+
+    file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async (err) => {
+      if (err) {
+        return next(new ErrorResponse('Problem with file upload', 500));
+      }
+
+      await Restaurant.findByIdAndUpdate(req.params.id, { photo: file.name });
+
+      res.status(200).json({
+        success: true,
+        date: file.name,
+      });
+    });
   }
 }
 

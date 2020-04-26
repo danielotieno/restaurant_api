@@ -1,3 +1,5 @@
+/* eslint-disable no-underscore-dangle */
+import path from 'path';
 import ErrorResponse from '../utils/errorResponse';
 import Menu from '../models/Menu';
 import Restaurant from '../models/Restaurant';
@@ -108,6 +110,48 @@ class MenuController {
     res.status(200).json({
       success: true,
       data: {},
+    });
+  }
+
+  // @desc   Upload photo for a menu
+  // @route  PUT /api/v1/menus/:id/photo
+  // @access Private
+  static async menuPhoto(req, res, next) {
+    const menu = await Menu.findById(req.params.id);
+
+    if (!menu) {
+      return next(new ErrorResponse('Menu not found', 404));
+    }
+
+    if (!req.file) {
+      return next(new ErrorResponse('Please upload a file', 400));
+    }
+
+    const { file } = req.files;
+
+    // Check File Size
+    if (file.size > process.env.MAX_FILE_UPLOAD) {
+      return next(
+        new ErrorResponse(
+          `Please upload an image file less than ${process.env.MAX_FILE_UPLOAD}`,
+          400,
+        ),
+      );
+    }
+
+    file.name = `photo_${menu._id}${path.parse(file.name).ext}`;
+
+    file.mv(`${process.env.FILE_UPLOAD_PATH}/${file.name}`, async (err) => {
+      if (err) {
+        return next(new ErrorResponse('Problem with file upload', 500));
+      }
+
+      await Restaurant.findByIdAndUpdate(req.params.id, { photo: file.name });
+
+      res.status(200).json({
+        success: true,
+        date: file.name,
+      });
     });
   }
 }
