@@ -5,6 +5,9 @@ import RestaurantController from '../controllers/restaurants';
 // Include other resource router
 import menuRouter from './menus';
 
+import Restaurant from '../models/Restaurant';
+import advancedSearch from '../middleware/advancedSearch';
+
 const {
   createRestaurant,
   getAllRestaurants,
@@ -24,7 +27,11 @@ router.get(
   '/restaurants/radius/:zipcode/:distance',
   asyncHandle(getRestaurantsInRadius),
 );
-router.get('/restaurants', asyncHandle(getAllRestaurants));
+router.get(
+  '/restaurants',
+  advancedSearch(Restaurant, 'menus'),
+  asyncHandle(getAllRestaurants),
+);
 router.get('/restaurants/:id', asyncHandle(getRestaurant));
 router.post('/restaurants', asyncHandle(createRestaurant));
 router.put('/restaurants/:id', asyncHandle(updateRestaurant));

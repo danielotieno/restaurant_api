@@ -11,24 +11,15 @@ class MenuController {
   // @access Public
 
   static async getMenus(req, res, next) {
-    let query;
-
     if (req.params.restaurantId) {
-      query = Menu.find({ restaurant: req.params.restaurantId });
-    } else {
-      query = Menu.find().populate({
-        path: 'restaurant',
-        select: 'name description website',
+      const menus = await Menu.find({ restaurant: req.params.restaurantId });
+      return res.status(200).json({
+        success: true,
+        count: menus.length,
+        data: menus,
       });
     }
-
-    const menus = await query;
-
-    res.status(200).json({
-      success: true,
-      count: menus.length,
-      data: menus,
-    });
+    res.status(200).json(res.advancedSearch);
   }
 
   // @desc   GET single menu
